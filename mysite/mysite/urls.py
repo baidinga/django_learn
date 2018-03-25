@@ -18,9 +18,10 @@ from django.contrib import admin
 from learn import views as learn_view
 from calc import views as calc_view
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    url(r'^administration/', admin.site.urls),
     url(r'^learn/', learn_view.index),
     url(r'^add/$', calc_view.index, name='home'),
     url(r'^add/(\d+)/(\d+)/', calc_view.old_add2_redirect),
+    url(r'^change/', calc_view.change_text, name='text'),
     url(r'^new_add/(\d+)/(\d+)/', calc_view.add2, name='add2'),
 ]
