@@ -21,5 +21,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^learn/', learn_view.index),
     url(r'^add/$', calc_view.index, name='home'),
-    url(r'^add/(\d+)/(\d+)/', calc_view.add2, name='add2'),
+    url(r'^add/(\d+)/(\d+)/', calc_view.old_add2_redirect),
+    url(r'^new_add/(\d+)/(\d+)/', calc_view.add2, name='add2'),
 ]
